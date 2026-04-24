@@ -305,7 +305,25 @@
       </div>
     </div>
   </div>
-  <div class="message">Estas flores amarillas son para ti</div>
+  <div class="message">
+  <span>Para ti, que haces todo más bonito.</span>
+  </div>
+  <div class="fireflies"></div>
 </body>
 <script src="app.js"></script>
+
+<script>
+const container = document.querySelector('.fireflies');
+
+for (let i = 0; i < 25; i++) {
+  const f = document.createElement('div');
+  f.classList.add('firefly');
+
+  f.style.left = Math.random() * 100 + "vw";
+  f.style.top = Math.random() * 100 + "vh";
+  f.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+  container.appendChild(f);
+}
+</script>
 </html>
